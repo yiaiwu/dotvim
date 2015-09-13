@@ -11,6 +11,7 @@
 " Don't write backup file if vim is being called by "chpass"
 "au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
+" auto load all plugins in vim bundle
 execute pathogen#infect()
 
 " ===================================================================
@@ -54,7 +55,7 @@ Bundle 'fisadev/vim-debug.vim'
 " Better file browser
 Bundle 'scrooloose/nerdtree'
 	" toggle nerdtree display
-	map <F3> :NERDTreeToggle<CR>
+	map <silent> <F3> :NERDTreeToggle<CR>
 	" open nerdtree with the current file selected
 	nmap ,t :NERDTreeFind<CR>
 	" don;t show these file types
@@ -66,11 +67,13 @@ Bundle 'scrooloose/nerdcommenter'
 " Class/module browser
 Bundle 'majutsushi/tagbar'
 	" toggle tagbar display
-	nmap <F4> :TagbarToggle<CR>
-	" 启动时自动focus, autofocus on tagbar open
+	nmap <silent> <F4> :TagbarToggle<CR>
+    " 启动时自动focus, autofocus on tagbar open
 	let g:tagbar_autofocus = 1
 	" --- open tagbar with cmd+\
 	"nmap <D-\> :TagbarToggle<CR>
+    let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+    let g:tagbar_width = 30
 " Code and files fuzzy finder
 Bundle 'kien/ctrlp.vim'
 " Extension to ctrlp, for fuzzy command finder
