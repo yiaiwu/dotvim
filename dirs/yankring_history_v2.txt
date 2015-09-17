@@ -1,1 +1,17 @@
+fname,v
+t,v
+,V
+https://github.com/fisadev/fisa-vim-config,v
+http://stackoverflow.com/questions/10727392/vim-not-allowing-backspace,v
+error detected while processing python-mode/autoload/pymode/lint.vim,v
+https://imail.landbank.com.tw/OWA/attachment.ashx?id=RgAAAAAXKmG13vxPTLpkERjVm%2fYyBwBU62kGexarT5iMT3ZAYfmCAAAOvuV2AAB8HcKwgW%2fZRpo9rc9iH%2b3VAAAnS2rGAAAJ&attcnt=1&attid0=BAABAAAA&attcid0=f27c07f5-9c88-4a7c-9382-d900fd813087,v
+import pdb; pdb.set_trace()  # XXX BREAKPOINT,V
+http://pc.cd/DBmrtalK,v
+Run the curren python file and display the output on a split with \r.,v
+Your code has been rated,v
+python module vim_debug not found,v
+vim pylint error detected while processing filetype auto commands for python,v
+* **Error checking of code** using Syntastic (it will detect unused variables or imports, syntax errors, and such), for several languages, highlighting the errors and warnings in the code. You can open an errors list with ``\e``. In python, the error checking includes **pep8** validation, and **pylint**.(``:Errors`` show list of errors and warnings on the current file.),v
+ClamXav,v
+module,v
 count; i++) {    },v

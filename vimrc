@@ -3,8 +3,9 @@
 
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
-"set nocompatible	" Use Vim defaults instead of 100% vi compatibility
-"set backspace=2		" more powerful backspacing
+set nocompatible	" 不兼容vi，Use Vim defaults instead of 100% vi compatibility
+set backspace=2		" more powerful backspacing
+" set bs=2 "回退可以刪除字符
 
 " Don't write backup file if vim is being called by "crontab -e"
 "au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
@@ -12,12 +13,15 @@
 "au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
 " auto load all plugins in vim bundle
+filetype off
 execute pathogen#infect()
+"call pathongen#infect()
+"call pathongen#helptags()
 
 " ===================================================================
 " Vundle initialization
-set nocompatible             " no vi-compatible, not compatible with the old-fashion vi mode, be iMproved, required
-filetype off                 " required!
+set nocompatible " no vi-compatible, not compatible with the old-fashion vi mode, be iMproved, required
+filetype off " required!
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
@@ -51,7 +55,7 @@ Bundle 'gmarik/vundle'
 " Plugins from github repos:
 
 " Python and PHP Debugger
-Bundle 'fisadev/vim-debug.vim'
+"Bundle 'fisadev/vim-debug.vim'
 " Better file browser
 Bundle 'scrooloose/nerdtree'
 	" toggle nerdtree display
@@ -99,7 +103,7 @@ Bundle 'Townk/vim-autoclose'
 " Indent text object
 Bundle 'michaeljsmith/vim-indent-object'
 " Python mode (indentation, doc, refactor, lints, code checking, motion and operators, highlighting, run and ipdb breakpoints)
-Bundle 'klen/python-mode'
+"Bundle 'klen/python-mode'
 " Better autocompletion
 Bundle 'Shougo/neocomplcache.vim'
 " Snippets manager (SnipMate), dependencies, and snippets repo
@@ -110,13 +114,13 @@ Bundle 'garbas/vim-snipmate'
 " Git/mercurial/others diff icons on the side of the file lines
 Bundle 'mhinz/vim-signify'
 " Automatically sort python imports
-Bundle 'fisadev/vim-isort'
+"Bundle 'fisadev/vim-isort'
 " Drag visual blocks arround
 Bundle 'fisadev/dragvisuals.vim'
 " Window chooser
 Bundle 't9md/vim-choosewin'
 " Python and other languages code checker
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 " Paint css colors with the real color
 Bundle 'lilydjwg/colorizer'
 " Relative numbering of lines (0 is the current line)
@@ -170,7 +174,7 @@ set fileencoding=utf-8
 set number
 
 " syntax highlight on
-" syntax on
+" syntax on " 顯示代碼高亮
 syntax enable
 
 " allow plugins by file type (required for plugins!)
@@ -178,8 +182,9 @@ syntax enable
 " filetype indent on
 " 自動補全plugin - pydiction
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+"filetype plugin on " enables filetype specific plugins
 filetype plugin indent on	" required
+"filetype on " enables filetype detection
 let g:pydiction_location='~/.vim/bundle/pydiction/complete-dict'
 let g:pydiction_menu_height=20
 
@@ -189,16 +194,23 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set softtabstop=4
+"set sw=4 " indent的空格數
+"set ts=4 " Tab等同的空格長度
+"set et " 是否展開Tab為空格,否則set noet
 
 " tab length exceptions on some file types
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
+" setup Pylint
+autocmd FileType python compiler pylint
+let g:pylint_onwrite = 0
+
 " 搜尋不分大小寫
 " set ic
 set ignorecase
-" 標記關鍵字 / 搜尋時高亮顯示匹配項
+" 標記關鍵字 / 搜尋時高亮顯示匹配項 / 如果之前有搜索過，則會高亮所有匹配項
 set hls
 " highlighted search results
 " hlight the last searched term
@@ -218,9 +230,10 @@ set foldmethod=syntax
 
 " show the cursor positon / 顯示位置指示器
 set ruler
+":set ru " 在右下角顯示游標
 
 " 啟用行游標提示
-set cursorline
+"set cursorline
 
 " 只在 Normal 以及 Visual 模式使用滑鼠，也就是取消 Insert 模式的滑鼠
 " set mouse=nv
@@ -268,7 +281,7 @@ imap <C-J> <C-X><C-O>
 " Comment this line to enable autocompletion preview window
 " (displays documentation related to the selected completion option)
 " Disabled by default because preview makes the window flicker
-set completeopt-=preview
+"set completeopt-=preview
 
 " save as sudo
 ca w!! w !sudo tee "%"
@@ -339,16 +352,16 @@ map <F2> :TaskList<CR>
 " Vim-debug ------------------------------
 
 " disable default mappings, have a lot of conflicts with other plugins
-let g:vim_debug_disable_mappings = 1
+"let g:vim_debug_disable_mappings = 1
 " add some useful mappings
-map <F5> :Dbg over<CR>
-map <F6> :Dbg into<CR>
-map <F7> :Dbg out<CR>
-map <F8> :Dbg here<CR>
-map <F9> :Dbg break<CR>
-map <F10> :Dbg watch<CR>
-map <F11> :Dbg down<CR>
-map <F12> :Dbg up<CR>
+"map <F5> :Dbg over<CR>
+"map <F6> :Dbg into<CR>
+"map <F7> :Dbg out<CR>
+"map <F8> :Dbg here<CR>
+"map <F9> :Dbg break<CR>
+"map <F10> :Dbg watch<CR>
+"map <F11> :Dbg down<CR>
+"map <F12> :Dbg up<CR>
 
 " CtrlP ------------------------------
 
@@ -396,29 +409,60 @@ let g:ctrlp_custom_ignore = {
 " show list of errors and warnings on the current file
 nmap <leader>e :Errors<CR>
 " check also when just opened the file
-let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_open = 1
 " don't put icons on the sign column (it hides the vcs status icons of signify)
-let g:syntastic_enable_signs = 0
+"let g:syntastic_enable_signs = 0
 " custom icons (enable them if you use a patched font, and enable the previous setting)
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_style_error_symbol = '✗'
-let g:syntastic_style_warning_symbol = '⚠'
+"let g:syntastic_error_symbol = '✗'
+"let g:syntastic_warning_symbol = '⚠'
+"let g:syntastic_style_error_symbol = '✗'
+"let g:syntastic_style_warning_symbol = '⚠'
+
+"http://wklken.me/posts/2015/06/07/vim-plugin-syntastic.html
+"let g:syntastic_error_symbol='>>'
+"let g:syntastic_warning_symbol='>'
+"let g:syntastic_check_on_open=1
+"let g:syntastic_check_on_wq=0
+"let g:syntastic_enable_highlighting=1
+"let g:syntastic_python_checkers=['pyflakes'] " 使用pyflakes,速度比pylint快
+"let g:syntastic_javascript_checkers = ['jsl', 'jshint']
+"let g:syntastic_html_checkers=['tidy', 'jshint']
+" 修改高亮的背景色, 适应主题
+" highlight SyntasticErrorSign guifg=white guibg=black
+
+" to see error location list
+"let g:syntastic_always_populate_loc_list = 0
+"let g:syntastic_auto_loc_list = 0
+"let g:syntastic_loc_list_height = 5
+"function! ToggleErrors()
+"    let old_last_winnr = winnr('$')
+"    lclose
+"    if old_last_winnr == winnr('$')
+        " Nothing was closed, open syntastic error location panel
+"        Errors
+"    endif
+"endfunction
+"nnoremap <Leader>s :call ToggleErrors()<cr>
 
 " Python-mode ------------------------------
 
 " don't use linter, we use syntastic for that
-let g:pymode_lint_on_write = 0
-let g:pymode_lint_signs = 0
+"let g:pymode_lint_on_write = 0
+"let g:pymode_lint_signs = 0
 " don't fold python code on open
-let g:pymode_folding = 0
+"let g:pymode_folding = 0
 " don't load rope by default. Change to 1 to use rope
-let g:pymode_rope = 0
+"let g:pymode_rope = 0
 " open definitions on same window, and custom mappings for definitions and occurrences
-let g:pymode_rope_goto_definition_bind = ',d'
-let g:pymode_rope_goto_definition_cmd = 'e'
-nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
-nmap ,o :RopeFindOccurrences<CR>
+"let g:pymode_rope_goto_definition_bind = ',d'
+"let g:pymode_rope_goto_definition_cmd = 'e'
+"nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
+"nmap ,o :RopeFindOccurrences<CR>
+
+"let g:pymode_python = 'python3'
+" vim --version | grep python3
+" 看是否有 +python3 以確認Vim是否有支援Python3
+
 
 " NeoComplCache ------------------------------
 
