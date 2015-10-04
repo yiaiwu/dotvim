@@ -1,4 +1,42 @@
+" Brief help  147 " :PluginList          - list configured plugins  148 " :PluginInstall(!)    - install (update) plugins  149 " :PluginSearch(!) foo - search (or refresh cache first) for foo  150 " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins,v
+   96 "Bundle 'fisadev/fisa-vim-colorscheme'   97 " Consoles as buffers,v
+" status line,V
+" set ls=2,V
+":set ru " 在右下角顯示游標,V
+"filetype on " enables filetype detection,V
+filetype plugin indent on	" required,V
+"filetype plugin on " enables filetype specific plugins,V
+" To ignore plugin indent changes, instead use:,V
+"                         82     let g:tagbar_width = 30,V
+"                      81     let g:tagbar_ctags_bin = '/usr/local/bin/ctags',V
+"                   80     "nmap <D-\> :TagbarToggle<CR>,V
+"                79     " --- open tagbar with cmd+\,V
+"             78     let g:tagbar_autofocus = 1,V
+"          77     " 启动时自动focus, autofocus on tagbari open,V
+"       76     nmap <silent> <F4> :TagbarToggle<CR>,V
+"    !  75     " toggle tagbar display / open tagbar with F4,V
+"    74 Bundle 'majutsushi/tagbar',V
+" ddClass/module browser,V
+" Class/module browserBundle 'majutsushi/tagbar',V
+" Class/module browser,V
+" set bs=2 "回退可以刪除字符,V
+open nerdtree with the current file selected,v
+" set ai,V
+"set et " 是否展開Tab為空格,否則set noet / expand tabs into spaces,V
+"set ts=4 " Tab等同的空格長度，set tabs to have 4 spaces,V
+"4 spaces,V
+"set sw=4 " indent的空格數 / when using the >> or << commands, shift lines by,V
+Radiobutton(app, variable = depot, text = "Seattle, WA", value = "Seattle, WA").pack(),V
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin,v
+https://imail.landbank.com.tw/OWA/attachment.ashx?id=RgAAAAAXKmG13vxPTLpkERjVm%2fYyBwBU62kGexarT5iMT3ZAYfmCAAAOvuV2AAB8HcKwgW%2fZRpo9rc9iH%2b3VAAAnTPAgAAAJ&attcnt=1&attid0=BAACAAAA&attcid0=ec79e612-1f51-47d4-ab45-f80192fabc97,v
+message boxdialog box,v
+取消唯讀。,v
 fname,v
+吳信億‎; 邵培銘‎; 吳家羚‎; 李文元‎; 陳美棗‎; 許珮甄‎; 柯文雅‎; 姜慧芳; 藍泓棋; 江柏樹; 劉立婷; 甘汝鳳; 黃子晏; 許柏岳; 林聖巡; 賴政義,V
+信億回覆全部回覆轉寄動作至: 黃子晏 副本: 丁上發‎; 江宜輝‎; 林聖巡‎; 吳信億‎; 陳美棗‎; 李文元‎; 邵培銘‎; 簡利安‎; 陳佳新‎; 柯文雅‎; 林榮華‎; 許珮甄‎; 鄭文濱‎; 劉創平‎; 黃秉承‎; 章本斐‎; 賴慧芳‎; 姜慧芳‎; estella@twca.com.tw‎; evachen@twca.com.tw‎; daniel_peng@twca.com.tw 類別: 上Evernote收件匣, 寄件備份2015年9月23日 下午 05:15保留原則: Delete Inbox (30 天) 到期: 2015/10/23這個項目將在 29 天後到期。如果要將項目保留較長的時間，請套用不同的保留原則。子晏您好， 本部同仁陳佳新先生至客戶處發現有EB可插卡轉帳，但Portal新台幣轉帳插卡放行時會出現「9056 PKCS11 Token不存在」問題，經與丁副科和聖巡討論，Portal簽章放行呼叫元件的方式與EB不同，煩請協助查詢問題原因，並考量Portal呼叫元件的方式是否比照EB辦理之可行性，謝謝。,v
+Model View ControllerThe model is the data stored.The view is just a fancy name for the widget.The controller is the code in tkinter that lets all of the views know when the model has changed.,v
+https://dl.dropboxusercontent.com/u/21299587/Tools/%E5%98%B8%E8%9D%A6%E7%B1%B3%E8%BC%B8%E5%85%A5%E6%B3%95_7.0.7.514.7z,v
+(資訊處請廠商回覆FEDI交易電文相關欄位均由EasyUse提供),v
 t,v
 ,V
 https://github.com/fisadev/fisa-vim-config,v

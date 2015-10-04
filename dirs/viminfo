@@ -11,12 +11,44 @@
 $
 
 # 命令列 歷史記錄 (新到舊):
+:q!
 :q
-:w
+:PluginClean
 :wq
-:Q
-:Pylint
+:PluginInstall
+:py3 print(sys.version)
+:echo has("python3")
+:version
+:PymodeTroubleshooting
+:Errors
+:lopen
+:w
+:PymodeLintAuto
+:PymodeDoc print
+:Pymodedoc print
+:pymodedoc print
+:Ack -i syn*
+:Ack -i syn
+:Ack syntastic
+:ack syntastic
+:SyntasticInfo
+:e
+:s
 :cc
+:PluginInstall!
+:PluginList
+:Error
+:1
+:flake8
+:flint
+:wq!
+:set ro
+:ro
+:Pylint
+:pylint
+:pyflake
+:pyflakes
+:Q
 :BundleClean
 :BundleInstall
 :echo $MYVIMRC
@@ -27,29 +59,12 @@ $
 :python import sys; print sys.version
 :python import sys
 :python import sys; print sys.verson
-:version
-:PymodeDoc print
 :PymodeDoc
 :Pydoc
-:Pydoc collections
-:BundleList
-:SyntasticInfo
-:Errors
-:,e
-:q!
-:BundelInstall!
-:BundleInstall(!)
-:'<,'
-:echo has("lua")
-:helptags ~/.vim/doc
-:helptags ~/.vim/bundle/python-mode/doc
-:Dbg .
-:dbg .
-:Dbg
 
 # 搜尋字串 歷史記錄 (新到舊):
-? \Vdef\%#
 ? \s\+$
+? \Vdef\%#
 ? \Vimp\%#
 ? \Vfor\%#
 
@@ -61,43 +76,112 @@ $
 # 輸入行  歷史記錄 (新到舊):
 
 # 暫存器:
-"0	CHAR	0
-	t
-"1	LINE	0
-	
+"0	LINE	0
+	" Git/mercurial/others diff icons on the side of the file lines
+	Bundle 'mhinz/vim-signify'
+""1	LINE	0
+	Bundle 'mhinz/vim-signify'
 "2	LINE	0
-	import pdb; pdb.set_trace()  # XXX BREAKPOINT
+	" Git/mercurial/others diff icons on the side of the file lines
 "3	LINE	0
-	
+	" status line
 "4	LINE	0
-	
-"5	CHAR	0
-	count; i++) {
-	    
-	}
-"6	CHAR	0
-	count; i++) {
-	    
-	}
+	" set ls=2
+"5	LINE	0
+	":set ru " 在右下角顯示游標
+"6	LINE	0
+	"filetype on " enables filetype detection
+"7	LINE	0
+	filetype plugin indent on	" required
+"8	LINE	0
+	"filetype plugin on " enables filetype specific plugins
+"9	LINE	0
+	" To ignore plugin indent changes, instead use:
 "z	LINE	0
-	File:/Users/jojo/.vim/learncode/python/__Tagbar__
+	File:/Users/jojo/.vimrc
 	
-""-	CHAR	0
-	fname
+"-	CHAR	0
+	i
 
 # 檔案標記:
-'0  32  0  ~/.vim/learncode/python/tvn-3b.pyw
-'1  47  0  ~/.vim/learncode/python/tvn-3b.pyw
-'2  44  0  ~/.vim/learncode/python/tvn-3b.pyw
-'3  44  0  ~/.vim/learncode/python/tvn-3.pyw
-'4  172  18  ~/.vimrc
-'5  6  14  ~/.vimrc
-'6  2  0  ~/.vim/learncode/python/imported_unused.py
-'7  6  0  ~/.vim/learncode/python/nesty_errors.py
-'8  1  0  ~/.vim/learncode/python/imported_unused.py
-'9  1  0  ~/.vim/learncode/python/nesty_errors.py
+'0  1  10  ~/.vim/learncode/python/add.py
+'1  1  0  ~/.vimrc
+'2  120  0  ~/.vimrc
+'3  533  0  ~/.vimrc
+'4  1  0  ~/vimrc
+'5  4  0  ~/.vim/learncode/python/add.py
+'6  69  1  ~/.vimrc
+'7  466  0  ~/.vimrc
+'8  114  28  ~/.vimrc
+'9  5  0  ~/.vim/learncode/python/add.py
 
 # Jumplist (由新到舊):
+-'  1  10  ~/.vim/learncode/python/add.py
+-'  1  0  ~/.vimrc
+-'  120  0  ~/.vimrc
+-'  533  0  ~/.vimrc
+-'  1  0  ~/vimrc
+-'  4  0  ~/.vim/learncode/python/add.py
+-'  69  1  ~/.vimrc
+-'  466  0  ~/.vimrc
+-'  114  28  ~/.vimrc
+-'  5  0  ~/.vim/learncode/python/add.py
+-'  457  0  ~/.vimrc
+-'  452  0  ~/.vimrc
+-'  7  0  ~/.vim/learncode/python/add.py
+-'  8  0  ~/.vim/learncode/python/add.py
+-'  112  0  ~/.vimrc
+-'  465  0  ~/.vimrc
+-'  67  0  ~/.vimrc
+-'  91  2  ~/.vimrc
+-'  96  0  ~/.vimrc
+-'  460  0  ~/.vimrc
+-'  470  0  ~/.vimrc
+-'  8  3  ~/.vim/learncode/python/imported_unused.py
+-'  90  4  ~/.vimrc
+-'  58  0  ~/.vimrc
+-'  423  38  ~/.vimrc
+-'  422  51  ~/.vimrc
+-'  439  0  ~/.vimrc
+-'  403  0  ~/.vimrc
+-'  427  0  ~/.vimrc
+-'  426  0  ~/.vimrc
+-'  213  0  ~/.vimrc
+-'  209  0  ~/.vimrc
+-'  484  0  ~/.vimrc
+-'  37  0  ~/.vimrc
+-'  199  0  ~/.vimrc
+-'  45  0  ~/.vimrc
+-'  150  0  ~/.vimrc
+-'  348  0  ~/.vimrc
+-'  71  0  ~/.vimrc
+-'  2  0  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  13  0  ~/.vim/learncode/python/hfmix.pyw
+-'  1  0  ~/.vim/learncode/python/hfmix.pyw
+-'  27  13  ~/.vim/learncode/python/hfmix.pyw
+-'  18  0  ~/.vim/learncode/python/hfmix.pyw
+-'  17  82  ~/.vim/learncode/python/headex-6.py
+-'  1  0  ~/.vim/learncode/python/headex-6.py
+-'  23  4  ~/.vim/learncode/python/headex-5.py
+-'  1  0  ~/.vim/learncode/python/headex-5.py
+-'  23  0  ~/.vim/learncode/python/deliveries.txt
+-'  1  0  ~/.vim/learncode/python/deliveries.txt
+-'  11  18  ~/.vim/learncode/python/headex-4.py
+-'  1  0  ~/.vim/learncode/python/headex-4.py
+-'  1  0  ~/.vim/learncode/python/depots.txt
+-'  30  39  ~/.vim/learncode/python/headex-4.py
+-'  24  0  ~/.vim/learncode/python/headex-3.py
+-'  1  0  ~/.vim/learncode/python/headex-3.py
+-'  31  14  ~/.vim/learncode/python/headex-3.py
+-'  25  0  ~/.vim/learncode/python/headex-2.py
+-'  1  0  ~/.vim/learncode/python/headex-2.py
+-'  22  23  ~/.vim/learncode/python/headex-2.py
+-'  26  45  ~/.vim/learncode/python/headex-1.py
+-'  1  0  ~/.vim/learncode/python/headex-1.py
+-'  25  0  ~/.vim/learncode/python/headex-1.py
+-'  24  0  ~/.vim/learncode/python/headex-1.py
+-'  13  29  ~/.vim/learncode/python/headex-1.py
 -'  32  0  ~/.vim/learncode/python/tvn-3b.pyw
 -'  1  0  ~/.vim/learncode/python/tvn-3b.pyw
 -'  47  0  ~/.vim/learncode/python/tvn-3b.pyw
@@ -105,100 +189,393 @@ $
 -'  44  0  ~/.vim/learncode/python/tvn-3.pyw
 -'  4  3  ~/.vim/learncode/python/tvn-3.pyw
 -'  1  0  ~/.vim/learncode/python/tvn-3.pyw
--'  172  18  ~/.vimrc
--'  180  0  ~/.vimrc
--'  147  0  ~/.vimrc
--'  54  0  ~/.vimrc
--'  1  0  ~/.vimrc
+-'  179  18  ~/.vimrc
+-'  185  0  ~/.vimrc
+-'  154  0  ~/.vimrc
+-'  55  0  ~/.vimrc
 -'  6  14  ~/.vimrc
 -'  2  0  ~/.vim/learncode/python/imported_unused.py
 -'  1  0  ~/.vim/learncode/python/imported_unused.py
 -'  6  0  ~/.vim/learncode/python/nesty_errors.py
 -'  1  0  ~/.vim/learncode/python/nesty_errors.py
--'  192  0  ~/.vimrc
+-'  193  26  ~/.vimrc
 -'  7  0  ~/.vimrc
--'  8  3  ~/.vim/learncode/python/imported_unused.py
--'  367  0  ~/.vimrc
+-'  361  0  ~/.vimrc
 -'  1  0  ~/.vim/plugin/debugger.vim
--'  466  0  ~/.vimrc
 -'  55  0  ~/.vim/bundle/python-mode/autoload/pymode/lint.vim
 -'  1  0  ~/.vim/bundle/python-mode/autoload/pymode/lint.vim
 -'  1  0  ~/.vim/learncode/python/import_unused.py
--'  187  0  ~/.vimrc
--'  186  0  ~/.vimrc
--'  189  0  ~/.vimrc
--'  14  0  ~/.vimrc
--'  208  23  ~/.vimrc
+-'  190  0  ~/.vimrc
+-'  191  0  ~/.vimrc
+-'  15  0  ~/.vimrc
 -'  1  0  ~/.vim/learncode/python/nesty_errors-2.py
 -'  32  0  ~/.vim/complier
 -'  1  0  ~/.vim/complier
--'  238  2  ~/.vimrc
--'  213  0  ~/.vimrc
+-'  234  2  ~/.vimrc
 -'  1  0  /Volumes/USB_4G/autorun.inf
--'  1  0  /Volumes/TOPMORE/autorun.inf
--'  7  0  ~/.vim/learncode/python/tvn-2.pyw
--'  1  0  ~/.vim/learncode/python/tvn-2.pyw
--'  39  55  ~/.vim/learncode/python/tvn-2.pyw
--'  20  3  ~/.vim/learncode/python/tvn-2.pyw
--'  14  3  ~/.vim/learncode/python/tvn-2.pyw
--'  3  3  ~/.vim/learncode/python/tvn-2.pyw
--'  446  0  ~/.vimrc
--'  7  0  ~/.vim/learncode/python/nesty_errors.py
--'  432  0  ~/.vimrc
--'  406  0  ~/.vimrc
--'  368  2  ~/.vimrc
--'  282  3  ~/.vimrc
--'  26  0  ~/.vim/learncode/python/earth.py
--'  1  0  ~/.vim/learncode/python/earth.py
--'  21  3  ~/.vim/learncode/python/earth.py
--'  15  7  ~/.vim/learncode/python/earth.py
--'  11  7  ~/.vim/learncode/python/earth.py
--'  2  7  ~/.vim/learncode/python/earth.py
--'  68  0  ~/.vimrc
--'  1  0  ~/.vim/learncode/python/test.py
--'  121  0  ~/.vimrc
--'  536  0  ~/.vimrc
--'  464  57  ~/.vimrc
--'  42  0  ~/.vimrc
--'  19  0  ~/.vimrc
--'  455  0  ~/.vimrc
--'  13  13  ~/.vim/learncode/python/tvn.pyw
--'  1  0  ~/.vim/learncode/python/tvn.pyw
--'  393  0  ~/.vimrc
--'  81  26  ~/.vimrc
--'  39  2  ~/.vimrc
--'  351  0  ~/.vimrc
--'  62  13  ~/.vimrc
--'  18  0  ~/.vimrc
--'  108  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  107  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  106  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  105  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  103  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  102  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  101  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  98  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  97  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  85  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  84  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  83  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  82  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  79  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  78  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  66  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  65  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  64  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  63  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  62  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  61  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  58  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  57  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  45  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  44  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  41  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
--'  40  0  ~/Documents/Head_First_Programming/Practice/chapter7/LOG
 
 # 檔案內 Mark 記錄 (由新到舊):
+
+> ~/.vim/learncode/python/add.py
+	"	1	10
+	^	1	11
+	.	1	11
+	+	1	11
+	+	1	11
+	+	1	11
+	+	8	0
+	+	1	0
+	+	9	0
+	+	7	0
+	+	5	0
+	+	3	0
+	+	1	11
+	+	1	11
+
+> ~/.vimrc
+	"	1	0
+	^	533	0
+	.	533	0
+	+	424	0
+	+	429	44
+	+	430	32
+	+	432	0
+	+	431	0
+	+	433	0
+	+	434	0
+	+	433	0
+	+	434	0
+	+	435	0
+	+	436	0
+	+	437	0
+	+	438	0
+	+	439	0
+	+	440	0
+	+	441	0
+	+	426	0
+	+	443	29
+	+	444	44
+	+	445	17
+	+	422	38
+	+	59	12
+	+	61	11
+	+	87	60
+	+	88	5
+	+	111	15
+	+	111	125
+	+	111	68
+	+	112	0
+	+	450	0
+	+	449	27
+	+	451	0
+	+	453	0
+	+	454	13
+	+	452	13
+	+	455	0
+	+	457	0
+	+	458	0
+	+	459	0
+	+	460	0
+	+	462	0
+	+	454	0
+	+	96	0
+	+	96	0
+	+	93	0
+	+	122	0
+	+	112	0
+	+	450	0
+	+	451	0
+	+	453	0
+	+	455	0
+	+	457	0
+	+	458	0
+	+	459	0
+	+	460	0
+	+	462	0
+	+	112	0
+	+	450	0
+	+	451	0
+	+	452	0
+	+	457	0
+	+	112	0
+	+	113	50
+	+	114	28
+	+	450	0
+	+	451	0
+	+	457	0
+	+	114	0
+	+	112	0
+	+	116	0
+	+	115	76
+	+	115	72
+	+	117	28
+	+	118	0
+	+	119	0
+	+	120	0
+	+	121	0
+	+	123	0
+	+	122	12
+	+	450	0
+	+	451	0
+	+	457	0
+	+	455	0
+	+	453	0
+	+	469	0
+	+	470	0
+	+	471	0
+	+	472	0
+	+	473	0
+	+	474	0
+	+	475	0
+	+	476	0
+	+	477	0
+	+	478	0
+	+	479	0
+	+	480	0
+	+	482	0
+	+	483	0
+	+	123	0
+	+	533	0
+
+> ~/.vim/learncode/python/[Vundle] clean
+	"	4	0
+	.	1	0
+	+	9	0
+	+	8	0
+	+	5	0
+	+	4	0
+	+	1	0
+
+> ~/[Vundle] Installer
+	"	22	0
+	.	1	0
+	+	36	0
+	+	22	0
+	+	1	0
+
+> ~/vimrc
+	"	1	0
+
+> ~/.vim/learncode/python/[Vundle] Installer
+	"	16	0
+	.	1	0
+	+	152	0
+	+	117	0
+	+	82	0
+	+	70	0
+	+	58	0
+	+	45	0
+	+	31	0
+	+	16	0
+	+	1	0
+
+> ~/.vim/learncode/python/__doc__
+	"	1	0
+	.	1	0
+	+	832	0
+	+	595	0
+	+	358	0
+	+	318	0
+	+	278	0
+	+	238	0
+	+	1	0
+
+> ~/.vim/learncode/python/imported_unused.py
+	"	8	3
+	^	8	4
+	.	8	4
+	+	3	16
+	+	4	23
+	+	6	26
+	+	7	20
+	+	8	4
+
+> ~/.vim/learncode/python/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+
+> ~/.vim/learncode/python/[Vundle] list
+	"	8	0
+	.	1	0
+	+	128	0
+	+	94	0
+	+	60	0
+	+	27	0
+	+	14	0
+	+	1	0
+
+> ~/[Vundle] list
+	"	1	0
+	.	1	0
+	+	1	0
+
+> /private/var/folders/5n/2kbvdv_95q706rb_l2k11qjr0000gn/T/vhzOXSZ/60
+	"	26	0
+
+> ~/[Vundle] clean
+	"	20	0
+	.	1	0
+	+	1	0
+
+> ~/__Tagbar__
+	"	34	4
+	.	49	0
+	+	172	0
+	+	116	0
+	+	59	0
+	+	49	0
+
+> ~/NERD_tree_1
+	"	51	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/.bashrc
+	"	2	0
+	^	2	0
+	.	1	36
+	+	1	36
+
+> ~/.vim/learncode/python/hfmix.pyw
+	"	13	0
+	^	1	6
+	.	1	6
+	+	4	10
+	+	5	27
+	+	6	31
+	+	8	42
+	+	10	12
+	+	11	0
+	+	28	0
+	+	13	18
+	+	15	26
+	+	17	17
+	+	19	16
+	+	21	61
+	+	22	30
+	+	24	61
+	+	21	56
+	+	24	63
+	+	25	0
+	+	24	0
+	+	25	30
+	+	27	14
+	+	27	14
+	+	13	0
+	+	17	0
+	+	15	21
+	+	21	53
+	+	22	23
+	+	24	51
+	+	25	21
+	+	28	0
+	+	28	0
+	+	1	6
+
+> ~/.vim/learncode/python/headex-6.py
+	"	17	82
+	^	17	83
+	.	17	82
+	+	2	24
+	+	17	81
+	+	17	82
+
+> ~/.vim/learncode/python/headex-5.py
+	"	23	4
+	^	23	0
+	.	18	0
+	+	3	16
+	+	5	43
+	+	6	31
+	+	7	41
+	+	8	37
+	+	9	47
+	+	10	33
+	+	11	53
+	+	12	23
+	+	13	34
+	+	14	34
+	+	16	52
+	+	18	0
+
+> ~/.vim/learncode/python/deliveries.txt
+	"	23	0
+
+> ~/.vim/learncode/python/headex-4.py
+	"	11	18
+	^	11	19
+	.	11	18
+	+	15	22
+	+	16	15
+	+	17	25
+	+	19	36
+	+	20	16
+	+	28	0
+	+	28	35
+	+	29	38
+	+	8	4
+	+	11	18
+
+> ~/.vim/learncode/python/depots.txt
+	"	1	0
+
+> ~/.vim/learncode/python/headex-3.py
+	"	24	0
+	^	31	15
+	.	31	14
+	+	17	0
+	+	19	19
+	+	20	14
+	+	21	81
+	+	22	81
+	+	23	77
+	+	31	14
+
+> ~/.vim/learncode/python/headex-2.py
+	"	25	0
+	^	22	24
+	.	20	44
+	+	18	47
+	+	19	47
+	+	20	44
+
+> ~/.vim/learncode/python/headex-1.py
+	"	26	45
+	^	26	46
+	.	26	46
+	+	15	10
+	+	16	31
+	+	17	34
+	+	18	18
+	+	19	12
+	+	20	40
+	+	21	24
+	+	22	18
+	+	23	36
+	+	24	19
+	+	25	14
+	+	26	54
+	+	27	14
+	+	3	16
+	+	4	39
+	+	5	27
+	+	6	37
+	+	7	33
+	+	8	43
+	+	9	29
+	+	10	49
+	+	11	24
+	+	12	30
+	+	13	29
+	+	26	54
+	+	1	6
+	+	3	0
+	+	26	46
 
 > ~/.vim/learncode/python/tvn-3b.pyw
 	"	32	0
@@ -265,111 +642,6 @@ $
 	+	37	0
 	+	44	56
 	+	44	0
-
-> ~/.vimrc
-	"	172	18
-	^	172	19
-	.	172	19
-	+	432	0
-	+	433	0
-	+	434	0
-	+	435	0
-	+	436	0
-	+	437	0
-	+	438	0
-	+	439	3
-	+	440	3
-	+	441	7
-	+	441	59
-	+	442	7
-	+	443	4
-	+	444	0
-	+	445	0
-	+	445	42
-	+	446	0
-	+	123	0
-	+	125	0
-	+	402	1
-	+	423	0
-	+	424	0
-	+	425	0
-	+	426	0
-	+	427	0
-	+	428	0
-	+	429	0
-	+	434	0
-	+	435	0
-	+	436	0
-	+	437	0
-	+	438	0
-	+	439	0
-	+	440	0
-	+	441	0
-	+	442	0
-	+	444	0
-	+	445	0
-	+	206	14
-	+	207	39
-	+	211	2
-	+	213	0
-	+	207	1
-	+	212	0
-	+	236	0
-	+	207	0
-	+	208	23
-	+	186	0
-	+	185	0
-	+	190	0
-	+	185	53
-	+	187	0
-	+	186	36
-	+	187	21
-	+	27	4
-	+	23	17
-	+	24	13
-	+	26	2
-	+	187	39
-	+	188	39
-	+	186	0
-	+	186	0
-	+	187	0
-	+	106	0
-	+	108	0
-	+	451	0
-	+	453	0
-	+	455	0
-	+	457	0
-	+	458	0
-	+	459	0
-	+	460	0
-	+	58	0
-	+	355	0
-	+	357	0
-	+	358	0
-	+	359	0
-	+	360	0
-	+	361	0
-	+	362	0
-	+	363	0
-	+	364	0
-	+	7	0
-	+	6	14
-	+	8	33
-	+	11	1
-	+	197	27
-	+	194	0
-	+	198	33
-	+	198	36
-	+	199	45
-	+	233	32
-	+	232	0
-	+	177	2
-	+	213	104
-	+	172	12
-	+	184	45
-	+	180	49
-	+	176	11
-	+	172	19
 
 > ~/ControlP
 	"	10	0
@@ -438,16 +710,6 @@ $
 	+	1	0
 	+	2	0
 
-> ~/.vim/learncode/python/imported_unused.py
-	"	2	0
-	^	8	4
-	.	8	4
-	+	3	16
-	+	4	23
-	+	6	26
-	+	7	20
-	+	8	4
-
 > ~/.vim/learncode/python/nesty_errors.py
 	"	6	0
 	^	7	0
@@ -485,26 +747,10 @@ $
 > ~/.vim/learncode/python/import_unused.py
 	"	1	0
 
-> ~/.vim/learncode/python/__doc__
-	"	1	0
-	.	1	0
-	+	515	0
-	+	278	0
-	+	41	0
-	+	1	0
-
 > ~/.vim/learncode/python/__run__
 	"	1	0
 	.	1	0
 	+	1	0
-	+	1	0
-
-> ~/.vim/learncode/python/[Vundle] list
-	"	1	0
-	.	1	0
-	+	102	0
-	+	68	0
-	+	34	0
 	+	1	0
 
 > ~/.vim/learncode/python/nesty_errors-2.py
@@ -686,19 +932,6 @@ $
 > ~/.vim/learncode/python/test.py
 	"	1	0
 
-> ~/.vim/learncode/python/[Vundle] Installer
-	"	36	0
-	.	1	0
-	+	71	0
-	+	36	0
-	+	1	0
-
-> ~/.vim/learncode/python/[Vundle] clean
-	"	1	6
-	.	1	0
-	+	2	0
-	+	1	0
-
 > ~/.vim/learncode/python/tvn.pyw
 	"	13	13
 	^	13	14
@@ -710,20 +943,6 @@ $
 	+	10	41
 	+	11	39
 	+	13	13
-
-> ~/__Tagbar__
-	"	1	0
-	.	13	0
-	+	126	0
-	+	70	0
-	+	13	0
-
-> ~/NERD_tree_1
-	"	4	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
 
 > ~/Documents/Head_First_Programming/Practice/chapter7/gameshow.py
 	"	3	0
