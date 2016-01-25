@@ -11,10 +11,20 @@
 $
 
 # 命令列 歷史記錄 (新到舊):
-:q!
 :q
-:PluginClean
+:w
 :wq
+:e ~./vimrc
+:vnew
+:q!
+:help Tagbar
+:NERDTree
+:BundleInstall(!)
+:BundleInstall
+:PluginInstall(!)
+:BundleList
+:PluginList
+:PluginClean
 :PluginInstall
 :py3 print(sys.version)
 :echo has("python3")
@@ -22,7 +32,6 @@ $
 :PymodeTroubleshooting
 :Errors
 :lopen
-:w
 :PymodeLintAuto
 :PymodeDoc print
 :Pymodedoc print
@@ -36,7 +45,6 @@ $
 :s
 :cc
 :PluginInstall!
-:PluginList
 :Error
 :1
 :flake8
@@ -50,23 +58,17 @@ $
 :pyflakes
 :Q
 :BundleClean
-:BundleInstall
 :echo $MYVIMRC
 :help version7
 :vim --version
-:vim
-:help
-:python import sys; print sys.version
-:python import sys
-:python import sys; print sys.verson
-:PymodeDoc
-:Pydoc
 
 # 搜尋字串 歷史記錄 (新到舊):
+? \Vmain\%#
+? \Vif\%#
+? \Vfor\%#
 ? \s\+$
 ? \Vdef\%#
 ? \Vimp\%#
-? \Vfor\%#
 
 # 運算式 歷史記錄 (新到舊):
 
@@ -80,141 +82,591 @@ $
 	" Git/mercurial/others diff icons on the side of the file lines
 	Bundle 'mhinz/vim-signify'
 ""1	LINE	0
-	Bundle 'mhinz/vim-signify'
+	
 "2	LINE	0
-	" Git/mercurial/others diff icons on the side of the file lines
+	Bundle 'mhinz/vim-signify'
 "3	LINE	0
-	" status line
+	" Git/mercurial/others diff icons on the side of the file lines
 "4	LINE	0
-	" set ls=2
+	" status line
 "5	LINE	0
-	":set ru " 在右下角顯示游標
+	" set ls=2
 "6	LINE	0
-	"filetype on " enables filetype detection
+	":set ru " 在右下角顯示游標
 "7	LINE	0
-	filetype plugin indent on	" required
+	"filetype on " enables filetype detection
 "8	LINE	0
-	"filetype plugin on " enables filetype specific plugins
+	filetype plugin indent on	" required
 "9	LINE	0
-	" To ignore plugin indent changes, instead use:
+	"filetype plugin on " enables filetype specific plugins
 "z	LINE	0
 	File:/Users/jojo/.vimrc
 	
 "-	CHAR	0
-	i
+	fname
 
 # 檔案標記:
-'0  1  10  ~/.vim/learncode/python/add.py
-'1  1  0  ~/.vimrc
-'2  120  0  ~/.vimrc
-'3  533  0  ~/.vimrc
-'4  1  0  ~/vimrc
-'5  4  0  ~/.vim/learncode/python/add.py
-'6  69  1  ~/.vimrc
-'7  466  0  ~/.vimrc
-'8  114  28  ~/.vimrc
-'9  5  0  ~/.vim/learncode/python/add.py
+'0  3  34  ~/.vim/readme.md
+'1  40  60  /usr/local/apache-tomcat-8.0.30/conf/tomcat-users.xml
+'2  2  34  ~/Documents/Head First Servlets and JSP/project1/etc/web.xml
+'3  1  22  ~/Documents/Head First Servlets and JSP/project1/src/Ch1Servlet.java
+'4  34  0  ~/.bash_profile
+'5  6  33  ~/Documents/Head First Java/chap05/GameHelper.java
+'6  32  0  ~/Documents/Head First Java/chap05/GameHelper.java
+'7  31  0  ~/Documents/Head First Java/chap05/Game.java
+'8  4  0  ~/Documents/Head First Java/chap05/Game.java
+'9  1  0  ~/Documents/Head First Java/chap05/SimpleDotComTester.java
 
 # Jumplist (由新到舊):
--'  1  10  ~/.vim/learncode/python/add.py
+-'  3  34  ~/.vim/readme.md
+-'  1  0  ~/.vim/readme.md
+-'  40  60  /usr/local/apache-tomcat-8.0.30/conf/tomcat-users.xml
+-'  1  0  /usr/local/apache-tomcat-8.0.30/conf/tomcat-users.xml
+-'  2  34  ~/Documents/Head First Servlets and JSP/project1/etc/web.xml
+-'  1  0  ~/Documents/Head First Servlets and JSP/project1/etc/web.xml
+-'  1  22  ~/Documents/Head First Servlets and JSP/project1/src/Ch1Servlet.java
+-'  17  0  ~/Documents/Head First Servlets and JSP/project1/src/Ch1Servlet.java
+-'  9  0  ~/Documents/Head First Servlets and JSP/project1/src/Ch1Servlet.java
+-'  6  8  ~/Documents/Head First Servlets and JSP/project1/src/Ch1Servlet.java
+-'  18  0  ~/Documents/Head First Servlets and JSP/project1/src/Ch1Servlet.java
+-'  34  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  6  33  ~/Documents/Head First Java/chap05/GameHelper.java
+-'  14  0  ~/Documents/Head First Java/chap05/GameHelper.java
+-'  13  0  ~/Documents/Head First Java/chap05/GameHelper.java
+-'  12  0  ~/Documents/Head First Java/chap05/GameHelper.java
+-'  8  0  ~/Documents/Head First Java/chap05/GameHelper.java
+-'  16  0  ~/Documents/Head First Java/chap05/GameHelper.java
+-'  5  0  ~/Documents/Head First Java/chap05/GameHelper.java
+-'  17  0  ~/Documents/Head First Java/chap05/GameHelper.java
+-'  4  0  ~/Documents/Head First Java/chap05/GameHelper.java
+-'  1  0  ~/Documents/Head First Java/chap05/GameHelper.java
+-'  32  0  ~/Documents/Head First Java/chap05/GameHelper.java
+-'  31  0  ~/Documents/Head First Java/chap05/Game.java
+-'  1  0  ~/Documents/Head First Java/chap05/Game.java
+-'  4  0  ~/Documents/Head First Java/chap05/Game.java
+-'  1  0  ~/Documents/Head First Java/chap05/SimpleDotComTester.java
+-'  16  62  ~/Documents/Head First Java/chap05/SimpleDotComTester.java
+-'  15  0  ~/Documents/Head First Java/chap05/SimpleDotComTester.java
+-'  14  0  ~/Documents/Head First Java/chap05/SimpleDotComTester.java
+-'  13  10  ~/Documents/Head First Java/chap05/SimpleDotComTester.java
+-'  459  0  ~/.vimrc
 -'  1  0  ~/.vimrc
--'  120  0  ~/.vimrc
--'  533  0  ~/.vimrc
+-'  3  0  ~/Documents/Head First C/Practice/chapter2/monte-3.c
+-'  1  1  ~/Documents/Head First C/Practice/chapter2/monte-3.c
+-'  542  0  ~/.vimrc
+-'  235  0  ~/.vimrc
+-'  1  0  ~./vimrc
+-'  4  0  ~/Documents/Head First C/Practice/chapter2/monte-3.c
+-'  7  28  ~/Documents/Head First C/Practice/chapter2/monte-3.c
+-'  5  0  ~/Documents/Head First C/Practice/chapter2/monte-2.c
+-'  1  1  ~/Documents/Head First C/Practice/chapter2/monte-2.c
+-'  10  1  ~/Documents/Head First C/Practice/chapter2/monte.c
+-'  1  1  ~/Documents/Head First C/Practice/chapter2/monte.c
+-'  4  2  ~/Documents/Head First C/Practice/chapter2/monte.c
+-'  10  0  ~/Documents/Head First C/Practice/chapter2/food-1.c
+-'  1  0  ~/Documents/Head First C/Practice/chapter2/food-1.c
+-'  30  7  ~/.vim/learncode/java/PhraseOMatic.java
+-'  1  0  ~/.vim/learncode/java/PhraseOMatic.java
+-'  413  0  ~/.vim/dirs/viminfo
+-'  1  0  ~/.vim/dirs/viminfo
+-'  4  2  ~/Downloads/BeerSong.java
+-'  1  0  ~/Downloads/BeerSong.java
+-'  71  33  ~/.vimrc
+-'  1  20  ~/abc.c
+-'  2  3  ~/abc.java
+-'  1  4  ~/abc.java
+-'  120  81  ~/.vimrc
+-'  125  0  ~/.vimrc
+-'  3  0  ~/Downloads/PhraseOMatic.java
+-'  1  0  ~/Downloads/PhraseOMatic.java
+-'  2  0  ~/Downloads/BeerSong.java
+-'  1  0  ~/Downloads/BeerSong
+-'  5  0  ~/Downloads/HelloWorld.java
+-'  2  0  ~/Downloads/HelloWorld.java
+-'  1  0  ~/Downloads/HelloWorld.java
+-'  68  1  ~/.vimrc
+-'  25  0  ~/.vim/learncode/python/hfmix-3.pyw
+-'  1  0  ~/.vim/learncode/python/hfmix-3.pyw
+-'  2  5  ~/.vim/learncode/python/close-box.pyw
+-'  1  0  ~/.vim/learncode/python/close-box.pyw
+-'  1  0  ~/.vim/learncode/python/hfmix-2.pyw
+-'  12  18  ~/.vim/learncode/python/close-box.pyw
+-'  8  3  ~/.vim/learncode/python/close-box.pyw
+-'  1  10  ~/.vim/learncode/python/add.py
+-'  123  0  ~/.vimrc
 -'  1  0  ~/vimrc
 -'  4  0  ~/.vim/learncode/python/add.py
--'  69  1  ~/.vimrc
--'  466  0  ~/.vimrc
--'  114  28  ~/.vimrc
+-'  72  1  ~/.vimrc
+-'  475  0  ~/.vimrc
+-'  117  28  ~/.vimrc
 -'  5  0  ~/.vim/learncode/python/add.py
--'  457  0  ~/.vimrc
--'  452  0  ~/.vimrc
+-'  466  0  ~/.vimrc
+-'  461  0  ~/.vimrc
 -'  7  0  ~/.vim/learncode/python/add.py
 -'  8  0  ~/.vim/learncode/python/add.py
--'  112  0  ~/.vimrc
--'  465  0  ~/.vimrc
--'  67  0  ~/.vimrc
--'  91  2  ~/.vimrc
--'  96  0  ~/.vimrc
--'  460  0  ~/.vimrc
--'  470  0  ~/.vimrc
+-'  115  0  ~/.vimrc
+-'  474  0  ~/.vimrc
+-'  94  2  ~/.vimrc
+-'  99  0  ~/.vimrc
+-'  469  0  ~/.vimrc
+-'  479  0  ~/.vimrc
 -'  8  3  ~/.vim/learncode/python/imported_unused.py
--'  90  4  ~/.vimrc
--'  58  0  ~/.vimrc
--'  423  38  ~/.vimrc
--'  422  51  ~/.vimrc
--'  439  0  ~/.vimrc
--'  403  0  ~/.vimrc
--'  427  0  ~/.vimrc
--'  426  0  ~/.vimrc
--'  213  0  ~/.vimrc
--'  209  0  ~/.vimrc
--'  484  0  ~/.vimrc
--'  37  0  ~/.vimrc
--'  199  0  ~/.vimrc
--'  45  0  ~/.vimrc
--'  150  0  ~/.vimrc
--'  348  0  ~/.vimrc
--'  71  0  ~/.vimrc
--'  2  0  ~/.bashrc
--'  1  0  ~/.bashrc
--'  13  0  ~/.vim/learncode/python/hfmix.pyw
--'  1  0  ~/.vim/learncode/python/hfmix.pyw
--'  27  13  ~/.vim/learncode/python/hfmix.pyw
--'  18  0  ~/.vim/learncode/python/hfmix.pyw
--'  17  82  ~/.vim/learncode/python/headex-6.py
--'  1  0  ~/.vim/learncode/python/headex-6.py
--'  23  4  ~/.vim/learncode/python/headex-5.py
--'  1  0  ~/.vim/learncode/python/headex-5.py
--'  23  0  ~/.vim/learncode/python/deliveries.txt
--'  1  0  ~/.vim/learncode/python/deliveries.txt
--'  11  18  ~/.vim/learncode/python/headex-4.py
--'  1  0  ~/.vim/learncode/python/headex-4.py
--'  1  0  ~/.vim/learncode/python/depots.txt
--'  30  39  ~/.vim/learncode/python/headex-4.py
--'  24  0  ~/.vim/learncode/python/headex-3.py
--'  1  0  ~/.vim/learncode/python/headex-3.py
--'  31  14  ~/.vim/learncode/python/headex-3.py
--'  25  0  ~/.vim/learncode/python/headex-2.py
--'  1  0  ~/.vim/learncode/python/headex-2.py
--'  22  23  ~/.vim/learncode/python/headex-2.py
--'  26  45  ~/.vim/learncode/python/headex-1.py
--'  1  0  ~/.vim/learncode/python/headex-1.py
--'  25  0  ~/.vim/learncode/python/headex-1.py
--'  24  0  ~/.vim/learncode/python/headex-1.py
--'  13  29  ~/.vim/learncode/python/headex-1.py
--'  32  0  ~/.vim/learncode/python/tvn-3b.pyw
--'  1  0  ~/.vim/learncode/python/tvn-3b.pyw
--'  47  0  ~/.vim/learncode/python/tvn-3b.pyw
--'  44  0  ~/.vim/learncode/python/tvn-3b.pyw
--'  44  0  ~/.vim/learncode/python/tvn-3.pyw
--'  4  3  ~/.vim/learncode/python/tvn-3.pyw
--'  1  0  ~/.vim/learncode/python/tvn-3.pyw
--'  179  18  ~/.vimrc
--'  185  0  ~/.vimrc
--'  154  0  ~/.vimrc
--'  55  0  ~/.vimrc
--'  6  14  ~/.vimrc
--'  2  0  ~/.vim/learncode/python/imported_unused.py
--'  1  0  ~/.vim/learncode/python/imported_unused.py
--'  6  0  ~/.vim/learncode/python/nesty_errors.py
--'  1  0  ~/.vim/learncode/python/nesty_errors.py
--'  193  26  ~/.vimrc
--'  7  0  ~/.vimrc
--'  361  0  ~/.vimrc
--'  1  0  ~/.vim/plugin/debugger.vim
--'  55  0  ~/.vim/bundle/python-mode/autoload/pymode/lint.vim
--'  1  0  ~/.vim/bundle/python-mode/autoload/pymode/lint.vim
--'  1  0  ~/.vim/learncode/python/import_unused.py
--'  190  0  ~/.vimrc
--'  191  0  ~/.vimrc
--'  15  0  ~/.vimrc
--'  1  0  ~/.vim/learncode/python/nesty_errors-2.py
--'  32  0  ~/.vim/complier
--'  1  0  ~/.vim/complier
--'  234  2  ~/.vimrc
--'  1  0  /Volumes/USB_4G/autorun.inf
+-'  93  4  ~/.vimrc
+-'  59  0  ~/.vimrc
+-'  432  38  ~/.vimrc
+-'  431  51  ~/.vimrc
+-'  448  0  ~/.vimrc
+-'  412  0  ~/.vimrc
 
 # 檔案內 Mark 記錄 (由新到舊):
+
+> ~/.vim/readme.md
+	"	3	34
+	^	3	35
+	.	3	34
+	+	3	34
+
+> /usr/local/apache-tomcat-8.0.30/conf/tomcat-users.xml
+	"	40	60
+	^	40	61
+	.	40	60
+	+	39	30
+	+	39	32
+	+	40	60
+
+> ~/Documents/Head First Servlets and JSP/project1/etc/web.xml
+	"	2	34
+	^	2	35
+	.	2	34
+	+	1	44
+	+	2	48
+	+	3	57
+	+	4	55
+	+	6	18
+	+	16	9
+	+	2	39
+	+	2	34
+
+> ~/Documents/Head First Servlets and JSP/project1/src/Ch1Servlet.java
+	"	1	22
+	^	16	27
+	.	16	26
+	+	5	44
+	+	6	0
+	+	18	0
+	+	6	0
+	+	6	45
+	+	6	47
+	+	8	38
+	+	7	48
+	+	8	40
+	+	9	4
+	+	17	4
+	+	9	47
+	+	10	52
+	+	11	30
+	+	12	26
+	+	13	62
+	+	13	73
+	+	14	23
+	+	15	27
+	+	16	26
+
+> ~/.bash_profile
+	"	34	0
+	^	31	0
+	.	31	0
+	+	33	64
+	+	34	0
+	+	31	41
+	+	30	0
+	+	31	0
+	+	30	1
+	+	31	1
+	+	30	0
+	+	31	0
+
+> /usr/libexec/java_home
+	"	1	0
+
+> ~/Documents/Head First Java/chap05/GameHelper.java
+	"	6	33
+	^	4	34
+	.	4	33
+	+	1	1
+	+	18	0
+	+	3	25
+	+	4	0
+	+	17	0
+	+	4	46
+	+	5	4
+	+	16	4
+	+	6	39
+	+	7	13
+	+	8	8
+	+	12	8
+	+	8	81
+	+	8	82
+	+	8	85
+	+	9	38
+	+	10	20
+	+	9	18
+	+	10	55
+	+	12	32
+	+	13	8
+	+	14	8
+	+	13	51
+	+	15	24
+	+	16	18
+	+	17	14
+	+	12	13
+	+	11	20
+	+	4	33
+
+> ~/Documents/Head First Java/chap05/Game.java
+	"	31	0
+	^	31	1
+	.	30	17
+	+	1	2
+	+	3	0
+	+	28	22
+	+	29	21
+	+	30	18
+	+	3	2
+	+	11	0
+	+	30	17
+
+> ~/Documents/Head First Java/chap05/SimpleDotComTester.java
+	"	1	0
+	^	16	65
+	.	16	62
+	+	1	2
+	+	3	0
+	+	6	81
+	+	7	83
+	+	8	68
+	+	9	48
+	+	10	98
+	+	12	37
+	+	13	0
+	+	13	0
+	+	17	0
+	+	13	35
+	+	14	8
+	+	15	8
+	+	14	74
+	+	16	62
+
+> ~/Documents/Head First Java/chap05/SimpleDotCom.java
+	"	29	15
+	^	29	16
+	.	29	15
+	+	1	2
+	+	12	77
+	+	13	97
+	+	14	120
+	+	15	0
+	+	16	39
+	+	17	68
+	+	19	71
+	+	21	23
+	+	22	12
+	+	20	71
+	+	24	0
+	+	25	19
+	+	23	74
+	+	24	74
+	+	23	97
+	+	26	77
+	+	27	83
+	+	28	18
+	+	16	124
+	+	19	96
+	+	22	27
+	+	28	13
+	+	29	15
+
+> ~/.vimrc
+	"	459	0
+	^	236	0
+	.	235	1
+	+	435	0
+	+	452	29
+	+	453	44
+	+	454	17
+	+	431	38
+	+	60	12
+	+	62	11
+	+	90	60
+	+	91	5
+	+	114	15
+	+	114	125
+	+	114	68
+	+	115	0
+	+	459	0
+	+	458	27
+	+	460	0
+	+	462	0
+	+	463	13
+	+	461	13
+	+	464	0
+	+	466	0
+	+	467	0
+	+	468	0
+	+	469	0
+	+	471	0
+	+	463	0
+	+	99	0
+	+	99	0
+	+	96	0
+	+	125	0
+	+	115	0
+	+	459	0
+	+	460	0
+	+	462	0
+	+	464	0
+	+	466	0
+	+	467	0
+	+	468	0
+	+	469	0
+	+	471	0
+	+	115	0
+	+	459	0
+	+	460	0
+	+	461	0
+	+	466	0
+	+	115	0
+	+	116	50
+	+	117	28
+	+	459	0
+	+	460	0
+	+	466	0
+	+	117	0
+	+	115	0
+	+	119	0
+	+	118	76
+	+	118	72
+	+	120	28
+	+	121	0
+	+	122	0
+	+	123	0
+	+	124	0
+	+	126	0
+	+	125	12
+	+	459	0
+	+	460	0
+	+	466	0
+	+	464	0
+	+	462	0
+	+	478	0
+	+	479	0
+	+	480	0
+	+	481	0
+	+	482	0
+	+	483	0
+	+	484	0
+	+	485	0
+	+	486	0
+	+	487	0
+	+	488	0
+	+	489	0
+	+	491	0
+	+	492	0
+	+	126	0
+	+	542	0
+	+	152	0
+	+	155	0
+	+	154	2
+	+	152	0
+	+	153	55
+	+	147	17
+	+	56	47
+	+	25	15
+	+	159	49
+	+	159	48
+	+	158	80
+	+	162	71
+	+	120	81
+	+	69	42
+	+	71	0
+	+	235	1
+
+> ~/Documents/Head First C/Practice/chapter2/monte-3.c
+	"	3	0
+	^	7	29
+	.	7	25
+	+	7	25
+
+> ~./vimrc
+	"	1	0
+
+> ~/Documents/Head First C/Practice/chapter2/monte-2.c
+	"	5	0
+	^	5	1
+	.	6	14
+	+	3	1
+	+	4	0
+	+	6	14
+
+> ~/Documents/Head First C/Practice/chapter2/monte.c
+	"	10	1
+	^	10	2
+	.	10	1
+	+	4	2
+	+	10	1
+
+> ~/Documents/Head First C/Practice/chapter2/food-1.c
+	"	10	0
+	^	10	1
+
+> ~/.vim/learncode/java/PhraseOMatic.java
+	"	30	7
+	^	31	17
+	.	31	14
+	+	5	0
+	+	6	44
+	+	8	34
+	+	10	0
+	+	13	102
+	+	15	0
+	+	14	0
+	+	18	47
+	+	23	26
+	+	28	29
+	+	31	14
+
+> ~/.vim/dirs/viminfo
+	"	413	0
+
+> ~/Downloads/BeerSong.java
+	"	4	2
+	^	3	3
+	.	3	2
+	+	1	2
+	+	3	2
+
+> ~/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/.vim/bundle/tagbar/doc/tagbar.txt
+	"	243	65
+
+> ~/abc.c
+	"	1	20
+	^	1	16
+	.	2	0
+	+	1	0
+	+	2	0
+
+> ~/abc.java
+	"	2	3
+	^	2	4
+	.	2	4
+	+	1	0
+	+	2	4
+	a	1	0
+
+> ~/[Vundle] list
+	"	2	0
+	.	1	0
+	+	39	0
+	+	20	0
+	+	1	0
+
+> ~/[Vundle] Installer
+	"	21	0
+	.	1	0
+	+	56	0
+	+	42	0
+	+	21	0
+	+	1	0
+
+> ~/Downloads/PhraseOMatic.java
+	"	3	0
+	^	3	0
+	.	1	2
+	+	1	2
+
+> ~/Downloads/BeerSong
+	"	1	0
+
+> ~/Downloads/HelloWorld.java
+	"	5	0
+	^	5	1
+	.	5	0
+	+	1	18
+	+	2	44
+	+	3	43
+	+	4	4
+	+	5	0
+
+> ~/.vim/learncode/python/hfmix-3.pyw
+	"	25	0
+	^	25	0
+	.	24	16
+	+	24	16
+
+> ~/.vim/learncode/python/close-box.pyw
+	"	2	5
+	^	2	6
+	.	2	5
+	+	2	42
+	+	4	10
+	+	5	29
+	+	6	31
+	+	8	0
+	+	10	0
+	+	10	32
+	+	11	81
+	+	13	21
+	+	15	42
+	+	16	13
+	+	16	14
+	+	8	0
+	+	11	42
+	+	12	0
+	+	11	0
+	+	17	0
+	+	1	5
+	+	2	5
+
+> ~/.vim/learncode/python/__doc__
+	"	1	0
+	.	1	0
+	+	25545	0
+	+	25308	0
+	+	25071	0
+	+	25031	0
+	+	24991	0
+	+	24951	0
+	+	24714	0
+	+	1	0
+
+> ~/.vim/learncode/python/hfmix-2.pyw
+	"	1	0
+
+> ~/.vim/learncode/python/__run__
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/.vim/[Vundle] list
+	"	2	0
+	.	1	0
+	+	1	0
 
 > ~/.vim/learncode/python/add.py
 	"	1	10
@@ -232,111 +684,6 @@ $
 	+	1	11
 	+	1	11
 
-> ~/.vimrc
-	"	1	0
-	^	533	0
-	.	533	0
-	+	424	0
-	+	429	44
-	+	430	32
-	+	432	0
-	+	431	0
-	+	433	0
-	+	434	0
-	+	433	0
-	+	434	0
-	+	435	0
-	+	436	0
-	+	437	0
-	+	438	0
-	+	439	0
-	+	440	0
-	+	441	0
-	+	426	0
-	+	443	29
-	+	444	44
-	+	445	17
-	+	422	38
-	+	59	12
-	+	61	11
-	+	87	60
-	+	88	5
-	+	111	15
-	+	111	125
-	+	111	68
-	+	112	0
-	+	450	0
-	+	449	27
-	+	451	0
-	+	453	0
-	+	454	13
-	+	452	13
-	+	455	0
-	+	457	0
-	+	458	0
-	+	459	0
-	+	460	0
-	+	462	0
-	+	454	0
-	+	96	0
-	+	96	0
-	+	93	0
-	+	122	0
-	+	112	0
-	+	450	0
-	+	451	0
-	+	453	0
-	+	455	0
-	+	457	0
-	+	458	0
-	+	459	0
-	+	460	0
-	+	462	0
-	+	112	0
-	+	450	0
-	+	451	0
-	+	452	0
-	+	457	0
-	+	112	0
-	+	113	50
-	+	114	28
-	+	450	0
-	+	451	0
-	+	457	0
-	+	114	0
-	+	112	0
-	+	116	0
-	+	115	76
-	+	115	72
-	+	117	28
-	+	118	0
-	+	119	0
-	+	120	0
-	+	121	0
-	+	123	0
-	+	122	12
-	+	450	0
-	+	451	0
-	+	457	0
-	+	455	0
-	+	453	0
-	+	469	0
-	+	470	0
-	+	471	0
-	+	472	0
-	+	473	0
-	+	474	0
-	+	475	0
-	+	476	0
-	+	477	0
-	+	478	0
-	+	479	0
-	+	480	0
-	+	482	0
-	+	483	0
-	+	123	0
-	+	533	0
-
 > ~/.vim/learncode/python/[Vundle] clean
 	"	4	0
 	.	1	0
@@ -344,13 +691,6 @@ $
 	+	8	0
 	+	5	0
 	+	4	0
-	+	1	0
-
-> ~/[Vundle] Installer
-	"	22	0
-	.	1	0
-	+	36	0
-	+	22	0
 	+	1	0
 
 > ~/vimrc
@@ -367,17 +707,6 @@ $
 	+	45	0
 	+	31	0
 	+	16	0
-	+	1	0
-
-> ~/.vim/learncode/python/__doc__
-	"	1	0
-	.	1	0
-	+	832	0
-	+	595	0
-	+	358	0
-	+	318	0
-	+	278	0
-	+	238	0
 	+	1	0
 
 > ~/.vim/learncode/python/imported_unused.py
@@ -405,11 +734,6 @@ $
 	+	14	0
 	+	1	0
 
-> ~/[Vundle] list
-	"	1	0
-	.	1	0
-	+	1	0
-
 > /private/var/folders/5n/2kbvdv_95q706rb_l2k11qjr0000gn/T/vhzOXSZ/60
 	"	26	0
 
@@ -425,15 +749,6 @@ $
 	+	116	0
 	+	59	0
 	+	49	0
-
-> ~/NERD_tree_1
-	"	51	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
 
 > ~/.bashrc
 	"	2	0
@@ -746,12 +1061,6 @@ $
 
 > ~/.vim/learncode/python/import_unused.py
 	"	1	0
-
-> ~/.vim/learncode/python/__run__
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
 
 > ~/.vim/learncode/python/nesty_errors-2.py
 	"	1	0

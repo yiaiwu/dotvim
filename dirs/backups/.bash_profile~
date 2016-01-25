@@ -1,0 +1,34 @@
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH
+
+##
+# Your previous /Users/jojo/.bash_profile file was backed up as /Users/jojo/.bash_profile.macports-saved_2015-09-10_at_23:28:47
+##
+
+# MacPorts Installer addition on 2015-09-10_at_23:28:47: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# Open Colorful Terminal
+export CLICOLOR=1
+export LSCOLORS=dxfxcxdxbxegedabagacad
+export TERM=xterm-256color
+
+# Bash prompt adjust show Git repository branch & commit
+#source .bash-git-prompt/gitprompt.sh
+
+# Prompt use Paul Irish .bash_prompt
+[[ -f "$HOME/.bash_prompt" ]] && source "$HOME/.bash_prompt"
+
+# Setting PATH for Android adb tool
+export PATH=${PATH}:~/Library/Android/sdk/platform-tools
+
+# Setting PATH for Java
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+

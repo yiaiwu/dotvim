@@ -22,7 +22,7 @@ execute pathogen#infect()
 " ===================================================================
 " Vundle initialization
 set nocompatible " no vi-compatible, not compatible with the old-fashion vi mode, be iMproved, required
-filetype off " required!
+filetype off     " required!
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
@@ -53,6 +53,7 @@ Bundle 'gmarik/vundle'
 
 " original repos on github
 " Keep Plugin/Bundle commands between here and 「filetype plugin indent on」
+" Keep Plugin commands between vuldle#begin/end.
 " -------------------------------------------------------------------
 " Plugins from github repos:
 
@@ -66,6 +67,8 @@ Bundle 'scrooloose/nerdtree'
 	nmap ,t :NERDTreeFind<CR>
 	" don;t show these file types
 	let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+    " 預設NERDTree在左邊，可以加入以下的設定，改到右邊
+    let g:NERDTreeWinPos = "right"
 	" open sidebar with cmd+k
 	"map <D-k> :NERDTreeToggle<CR>
 " Code commenter
@@ -114,7 +117,7 @@ Bundle 'klen/python-mode'
 "Bundle 'davidhalter/jedi-vim'
 " NeoComplCache: Better autocompletion / Ultimate auto-completion system
 Bundle 'Shougo/neocomplcache.vim'
-" SnipMate: Snippets manager, dependencies, and snippets repo
+" SnipMate: Snippets manager, dependencies, and snippets repo, 自動補齊程式碼
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'honza/vim-snippets'
@@ -147,10 +150,16 @@ Bundle 'scrooloose/syntastic'
 " Yank history navigation
 "Bundle 'YankRing.vim'
 
+" All of Plugins must be added before the following line 
+call vundle#end()   " required
+"
 " Brief help
 " :PluginList          - list configured plugins
+" :BundleList          - 列出可用的Plugin，移到Plugin上，按i即可安裝
 " :PluginInstall(!)    - install (update) plugins
+" :BundleInstall       - 安裝你寫入.vimrc的Plugin，已安裝的話就檢查更新
 " :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :BundleSearch [name] - 搜尋Plugin，移到Plugin上，按i即可安裝
 " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
 
 " ===================================================================
@@ -223,7 +232,7 @@ set autoindent
 set smartindent
 
 " 代碼折壘
-set foldmethod=syntax
+" set foldmethod=syntax
 
 " set ru / show the cursor positon / 在右下角顯示游標
 set ruler
